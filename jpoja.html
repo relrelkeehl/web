@@ -1,0 +1,177 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f0f0f0; 
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            cursor : url(palka.png), auto;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 50px;
+            display: flex; 
+            gap: 100px;
+            align-items: flex-start;
+        }
+
+        ul { list-style-type: none; margin: 0; padding: 0; }
+        h2 { font-family: Arial, sans-serif; font-size: 18px; margin-bottom: 20px;}
+
+        .vertical-menu {
+            width: 220px;
+            border: 1px solid #ff3bc4;
+        }
+
+        .menu-link {
+            display: block;
+            color: #000;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            padding: 12px 10px;
+            border-bottom: 1px solid #ffa7dc;
+        }
+        .link1 {
+            position: absolute;
+        }
+        .vertical-menu > li:last-child > .menu-link { border-bottom: none; }
+
+        .vertical-menu li:hover > .menu-link {
+            background: linear-gradient(to bottom, #ffa7dc, #ffa7dc);
+            color: #fff;
+        }
+        .menu-right li {
+            position: relative;
+        }
+
+        .submenu-right {
+            display: none;     
+            
+            top: 0;              
+            left: 100%;
+            width: 180px;
+            z-index: 10;
+            border: 1px solid #ffbae0;
+        }
+        .submenu-right-right {
+            display: none;     
+            position: absolute;
+            top: 0;              
+            left: 100%;
+            width: 180px;
+            z-index: 50;
+            border: 1px solid #ffbae0;
+        }
+        .menu-right li:hover > .submenu-right {
+            display: block;
+        }
+        
+        .submenu-right .submenu-link {
+            display: block;
+            background: linear-gradient(to bottom, #f0f0f0, #ffbfed);
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #ffa4d1;
+        }
+        .submenu-right-right .submenu-right {
+            display: block;
+            background: linear-gradient(to bottom, #f0f0f0, #ffbfed);
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+            text-align: center;
+            padding: 1px;
+            border-bottom: 1px solid #ffa4d1;
+        }
+         .submenu-right li:hover > .submenu-right-right {
+            display: block;
+        }
+
+        .submenu-down {
+            display: none; 
+        }
+
+        .menu-down li:hover > .submenu-down {
+            display: block;
+        }
+
+        .submenu-down .submenu-link {
+            display: block;
+            background: linear-gradient(to bottom, #f0f0f0, #ffbfed);
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+            text-align: center;
+            padding: 12px;
+            border-bottom: 1px solid #ffa4d1;
+        
+        }
+
+   </style>
+</head>
+<body>
+    <div>
+        <h2>МЕНЮ ВПРАВО</h2>
+        <ul class="vertical-menu menu-right">
+            <li>
+                <a href="#" class="menu-link">ГЛАВНАЯ</a>
+                <ul class="submenu-right">
+                    <li><a href="#" class="submenu-link">главная страница</a></li>
+                    <li><a href="#" class="submenu-link">контакты</a></li>
+                    <li><a href="#" class="submenu-link">о нас</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="menu-link">ОТДЕЛЫ ПРОДАЖ</a></li>
+            <li>
+                <a href="#" class="menu-link">ПОСТАВЩИКИ</a>
+                <ul class="submenu-right">
+                    <li>
+                        <a href="#" class="submenu-link">ооо "дизайн"</a>
+                        <ul class="submenu-right-right">
+                            <li><a href="#" class="submenu-link">бебебе</a></li>
+                            <li><a href="#" class="submenu-link">мяумяу</a></li>
+                            <li><a href="#" class="submenu-link">мемеме</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="submenu-link">ооо "арт"</a></li>
+                    <li><a href="#" class="submenu-link">ооо "фотостиль"</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="menu-link link1">НАШИ УСЛУГИ</a></li>
+            
+            <li><a href="#" class="menu-link">КОНТАКТЫ</a></li>
+            <li><a href="#" class="menu-link">О НАС</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>МЕНЮ ВНИЗ</h2>
+        <ul class="vertical-menu menu-down">
+            <li>
+                <a href="#" class="menu-link active-link">ГЛАВНАЯ</a>
+                <ul class="submenu-down">
+                    <li><a href="#" class="submenu-link">главная страница</a></li>
+                    <li><a href="#" class="submenu-link">контакты</a></li>
+                    <li><a href="#" class="submenu-link">о нас</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="menu-link">ОТДЕЛЫ<br>ПРОДАЖ</a></li>
+            <li>
+                <a href="#" class="menu-link active-link">ПОСТАВЩИКИ</a>
+                <ul class="submenu-down">
+                    <li><a href="#" class="submenu-link">ооо"дизайн"</a></li>
+                    <li><a href="#" class="submenu-link">ооо "арт"</a></li>
+                    <li><a href="#" class="submenu-link">ооо "фотостиль"</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="menu-link">НАШИ УСЛУГИ</a></li>
+            <li><a href="#" class="menu-link">КОНТАКТЫ</a></li>
+            <li><a href="#" class="menu-link">О НАС</a></li>
+        </ul>
+
+    </div>
+</body>
+</html>
